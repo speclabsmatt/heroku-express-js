@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import NavTemplate from './NavTemplate';
 
 class App extends Component {
   constructor(props) {
@@ -34,23 +35,48 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div>
+        <NavTemplate />
+        <main role="main" className="container">
+        <div className="starter-template">
+          <h1>Bootstrap starter template</h1>
         </div>
-        <p className="App-intro">
-          {'This is '}
-          <a href="https://github.com/mars/heroku-cra-node">
-            {'create-react-app with a custom Node/Express server'}
-          </a><br/>
-        </p>
-        <p className="App-intro">
-          {this.state.fetching
-            ? 'Fetching message from API'
-            : this.state.message}
-        </p>
+        <div className="my-3 p-3 bg-white rounded box-shadow">
+        <h6 className="border-bottom border-gray pb-2 mb-0">Recent Job Postings</h6>
+          <div className="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" className="mr-2 rounded"></img>
+            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong className="d-block text-gray-dark">Jakarta, Indonesia</strong>
+              <span>Test Company</span><br />
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              </div>
+          </div>
+          <div className="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" className="mr-2 rounded"></img>
+            <div className="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong className="d-block text-gray-dark">@username</strong>
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              </div>
+          </div>
+        </div>
+
+        <div className="App">
+          <p className="App-intro starter-template">
+            {this.state.fetching
+              ? 'Fetching message from API'
+              : this.state.message}
+          </p>
+        </div>
+        </main>
+
+      <footer className="footer">
+      <div className="container">
+        <span className="text-muted">© 2018 TeflWeb.com. All Rights Reserved.</span>
+        <span className="text-muted float-right"> Home | About | Contact</span>
       </div>
+    </footer>
+      </div>
+
     );
   }
 }
