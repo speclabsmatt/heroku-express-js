@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import NavTemplate from './NavTemplate';
+import CustomNav from './CustomNav';
 
 class App extends Component {
   constructor(props) {
@@ -36,11 +36,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavTemplate />
+        <CustomNav />
         <main role="main" className="container">
-        <div className="starter-template">
+        {/* <div className="starter-template">
           <h1>Bootstrap starter template</h1>
-        </div>
+        </div> */}
         <div className="my-3 p-3 bg-white rounded box-shadow">
         <h6 className="border-bottom border-gray pb-2 mb-0">Recent Job Postings</h6>
           <div className="media text-muted pt-3">

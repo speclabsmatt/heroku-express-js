@@ -12,7 +12,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-export default class NavTemplate extends React.Component {
+export default class CustomNav extends React.Component {
   constructor(props) {
     super(props);
 
@@ -32,7 +32,7 @@ export default class NavTemplate extends React.Component {
         <Navbar className="navbar navbar-expand-md fixed-top navbar-dark bg-medium" dark expand="md">
         {/* <div className="nav-container"> */}
         <div className="container">
-          <NavbarBrand href="/"><span className="align-middle">TEFL Web</span>
+          <NavbarBrand href="/"><span className="align-middle">TEFLspace</span>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -45,12 +45,13 @@ export default class NavTemplate extends React.Component {
                 <NavLink href="/components/">Jobs</NavLink>
               </NavItem> */}
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                <i class="fas fa-user"></i> mclanier
+                <DropdownToggle /*add caret here */>
+                Log in / Register
+                {/* <span className="fa-custom"> <i class="fas fa-user-circle"></i></span> mclanier */}
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                  {/* <i className="fas fa-cog"></i> Settings */}
                   </DropdownItem>
                   <DropdownItem>
                     Option 2
@@ -69,7 +70,7 @@ export default class NavTemplate extends React.Component {
         
             <div className="nav-scroller bg-white box-shadow">
             <div className="container">
-      <nav className="nav nav-underline">
+      <Nav className="nav nav-underline">
         <a className="nav-link active" href="#">
             Jobs 
             <span className="badge badge-pill bg-light align-text-bottom">321</span>
@@ -80,8 +81,7 @@ export default class NavTemplate extends React.Component {
         </a>
         <a className="nav-link" href="#">Resources</a>
         <a className="nav-link" href="#">Community</a>
-        <a className="nav-link" href="#">Link</a>
-      </nav>
+      </Nav>
     </div>
 </div>
         {/* <div className="container">
